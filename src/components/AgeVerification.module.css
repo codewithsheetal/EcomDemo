@@ -52,6 +52,22 @@
   margin-bottom: 24px;
 }
 
+.warning {
+  background: #fef3c7;
+  border: 1px solid #f59e0b;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.warning p {
+  color: #92400e;
+  font-size: 14px;
+  margin: 0;
+  font-weight: 500;
+}
+
 .buttons {
   display: flex;
   gap: 16px;
