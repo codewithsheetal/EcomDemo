@@ -260,10 +260,10 @@ function Home() {
           <div className={styles.footerSection}>
             <h4>Customer Service</h4>
             <ul>
-              <li><a href="#">Shipping Info</a></li>
-              <li><a href="#">Returns</a></li>
-              <li><a href="#">Age Verification</a></li>
-              <li><a href="#">FAQ</a></li>
+              <li><Link to="/shipping">Shipping Info</Link></li>
+              <li><Link to="/returns">Returns</Link></li>
+              <li><Link to="/age-verification">Age Verification</Link></li>
+              <li><Link to="/faq">FAQ</Link></li>
             </ul>
           </div>
           <div className={styles.footerSection}>

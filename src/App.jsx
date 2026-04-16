@@ -11,6 +11,7 @@ import ProductDetails from "./pages/ProductDetails";
 import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import UnderConstruction from "./pages/UnderConstruction";
 import './App.css';
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/shipping" element={<UnderConstruction />} />
+            <Route path="/returns" element={<UnderConstruction />} />
+            <Route path="/age-verification" element={<UnderConstruction />} />
+            <Route path="/faq" element={<UnderConstruction />} />
+            <Route path="*" element={<UnderConstruction />} />
           </Routes>
         </Router>
       </CartProvider>
