@@ -22,6 +22,7 @@ function App() {
     setAgeVerified(true);
   };
 
+  // Always show age verification on every page load
   if (!ageVerified) {
     return <AgeVerification onVerify={handleAgeVerification} />;
   }

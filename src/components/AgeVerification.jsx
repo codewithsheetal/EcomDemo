@@ -2,15 +2,11 @@ import { useState, useEffect } from 'react';
 import styles from './AgeVerification.module.css';
 
 function AgeVerification({ onVerify }) {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
 
   useEffect(() => {
-    const isVerified = localStorage.getItem('ageVerified');
-    if (!isVerified) {
-      setIsVisible(true);
-    } else {
-      onVerify();
-    }
+    // Always show age verification on every page load
+    setIsVisible(true);
 
     // Prevent escape key from closing the modal
     const handleKeyDown = (e) => {
@@ -19,18 +15,15 @@ function AgeVerification({ onVerify }) {
       }
     };
 
-    if (!isVerified) {
-      document.addEventListener('keydown', handleKeyDown);
-    }
+    document.addEventListener('keydown', handleKeyDown);
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
-  }, [onVerify]);
+  }, []);
 
   const handleVerify = (isAdult) => {
     if (isAdult) {
-      localStorage.setItem('ageVerified', 'true');
       setIsVisible(false);
       onVerify();
     } else {
